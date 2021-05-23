@@ -89,25 +89,9 @@ include("header.php");
         </div>
 
         <div class="col-12 col-lg-7 mt-3 mb-3 border-start border-white ps-5">
-            <h2 class="mb-5"><?php echo $lang->l('introduction'); ?></h2>
+            <h2 class="mb-5"><?= $lang->l('introduction'); ?></h2>
             <div class="txtcontainer">
-                <p>
-                    Bienvenue sur "<?= TITLE ?>", un site où vous retrouverez toutes les informations sur la carrière de l'artiste <?= $mainartist ?>, bassiste, compositeur, interprète.
-                    <br/>Ce site est le fruit de la collaboration entre différents admirateurs du travail de l'artiste depuis de nombreuses années.
-                </p>
-
-                <p>
-                    Découvrez les différentes sections du site : Discographie, Tournées, Archives audios et vidéos, "<?= PODCAST_TITLE ?>" by Cédric, Pascal, Maëlyss & more, Clips, ...
-                    <br/>N'hésitez pas à fouiller dans les informations pour trouver ce que vous cherchez.
-                </p>
-
-                <p>
-                    Le site est en cours de construction. Les différentes parties du site ouvriront au fur et à mesure. Merci de votre patience.
-                </p>
-
-                <p>
-                    A bientôt. <br/>Stéphanie/Footeuz
-                </p>
+                <?= $lang->l('txt_home'); ?>
             </div>
         </div>
     </div>
