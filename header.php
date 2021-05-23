@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="description" content="<?= addslashes($page_metadesc) ?> ♪" />
     <meta name="viewport" content="width=device-width, user-scalable=no" />
-    <meta property="og:title" content="Zone <?= $mainartist ?> ♫ <?= addslashes($page_title) ?>" />
+    <meta property="og:title" content="<?= TITLE ?> ♫ <?= addslashes($page_title) ?>" />
     <meta property="og:type" content="<?= (isset($og_type)&&!empty($og_type)) ? $og_type : 'website' ?>" />
     <meta property="og:url" content="<?= (isset($og_url)&&!empty($og_url)) ? URL.$og_url : URL ?>" />
     <meta property="og:description" content="<?= (isset($page_metadesc)&&!empty($page_metadesc)) ? addslashes($page_metadesc) : '' ?>" />
