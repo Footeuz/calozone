@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Zone <?= $mainartist ?> ♫ <?= addslashes($page_title) ?></title>
+    <title><?= TITLE ?> ♫ <?= addslashes($page_title) ?></title>
     <meta charset="UTF-8" />
     <meta name="description" content="<?= addslashes($page_metadesc) ?> ♪" />
     <meta name="viewport" content="width=device-width, user-scalable=no" />
