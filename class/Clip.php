@@ -7,7 +7,7 @@
  */
 
 class Clip extends Root {
-    const TBNAME = 'caloz_clip';
+    const TBNAME = TABLEPREFIX.'_clip';
     
     static $columns = array(
         'id' => 'int(8) NOT NULL',

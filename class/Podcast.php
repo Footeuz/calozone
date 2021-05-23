@@ -7,7 +7,7 @@
  */
 
 class Podcast extends Root {
-    const TBNAME = 'caloz_podcast';
+    const TBNAME = TABLEPREFIX.'_podcast';
     
     static $columns = array(
         'id' => 'int(8) NOT NULL',

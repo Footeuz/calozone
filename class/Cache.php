@@ -35,16 +35,6 @@ class Cache {
     static $cache_useradmin         = array();
     /**
      *
-     * @var \Question[]
-     */
-    static $cache_question         = array();
-    /**
-     *
-     * @var \Response[]
-     */
-    static $cache_response         = array();
-    /**
-     *
      * @var \Image[]
      */
     static $cache_image            = array();
@@ -72,36 +62,6 @@ class Cache {
         if(isset(self::$cache_useradmin[$id])) return self::$cache_useradmin[$id];
         self::$cache_useradmin[$id] = new UserAdmin($id);
         return self::$cache_useradmin[$id];
-    }
-
-    /**
-     *
-     * @param int $id
-     * @return \Question
-     */
-    public static function getQuestion($id){
-        if(isset(self::$cache_question[$id])) return self::$cache_question[$id];
-        $cdb = MemCacheDriver::getData(Question::class.".$id");
-        if($cdb) return $cdb;
-
-        self::$cache_question[$id] = new Question($id);
-        MemCacheDriver::setData(Question::class.".$id",self::$cache_question[$id]);
-
-        return self::$cache_question[$id];
-    }
-
-    /**
-     * @param int $id
-     * @return Response
-     */
-    public static function getResponse($id){
-        if(isset(self::$cache_response[$id])) return self::$cache_response[$id];
-        $cdb = MemCacheDriver::getData(Response::class.".$id");
-        if($cdb) return $cdb;
-        self::$cache_response[$id] = new Response($id);
-        MemCacheDriver::setData(Response::class.".$id",self::$cache_response[$id]);
-
-        return self::$cache_reponses[$id];
     }
 
     /**

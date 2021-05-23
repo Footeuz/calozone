@@ -6,7 +6,7 @@
  * @author Stephanie Michel <stephanie@boreal-business.net>
  */
 class User extends Root {
-    const TBNAME = 'caloz_user';
+    const TBNAME = TABLEPREFIX.'_user';
     const Genre_H = 'H';
     const Genre_F = 'F';
     const Genre_Nan = 'A';

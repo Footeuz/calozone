@@ -6,7 +6,7 @@
  */
 
 class PictureFile extends Root {
-    const TBNAME = 'caloz_picture_file';
+    const TBNAME = TABLEPREFIX.'_picture_file';
 
     static $columns = array(
         'id' => 'int(8) NOT NULL',

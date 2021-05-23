@@ -6,7 +6,7 @@
  * @author Stephanie Michel <stephanie@boreal-business.net>
  */
 class ClientTheme extends Root {
-    const TBNAME = 'caloz_client_theme';
+    const TBNAME = TABLEPREFIX.'_client_theme';
 
     static $columns = array(
         'id' => 'int(11) NOT NULL',

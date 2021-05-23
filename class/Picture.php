@@ -7,7 +7,7 @@
  */
 
 class Picture extends Root {
-    const TBNAME = 'caloz_picture';
+    const TBNAME = TABLEPREFIX.'_picture';
     static $columns = array(
         'id' => 'int(8) NOT NULL',
         'data' => 'mediumblob',

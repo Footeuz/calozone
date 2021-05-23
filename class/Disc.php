@@ -7,7 +7,7 @@
  */
 
 class Disc extends Root {
-    const TBNAME = 'caloz_disc';
+    const TBNAME = TABLEPREFIX.'_disc';
 
     const SUPPORT_CD = '1';
     const SUPPORT_SINGLE = '2';

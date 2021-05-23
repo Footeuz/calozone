@@ -7,7 +7,7 @@
  */
 
 class UserAdmin extends Root {
-    const TBNAME = 'caloz_user_admin';
+    const TBNAME = TABLEPREFIX.'_user_admin';
     
     const S_ADMIN = 'admin';
     const S_SUPERADMIN = 'superadmin';

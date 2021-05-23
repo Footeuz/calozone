@@ -7,7 +7,7 @@
  */
 
 class Artist extends Root {
-    const TBNAME = 'caloz_artist';
+    const TBNAME = TABLEPREFIX.'_artist';
     
     static $columns = array(
         'id' => 'int(8) NOT NULL',

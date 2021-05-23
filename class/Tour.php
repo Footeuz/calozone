@@ -7,7 +7,7 @@
  */
 
 class Tour extends Root {
-    const TBNAME = 'caloz_tour';
+    const TBNAME = TABLEPREFIX.'_tour';
     
     static $columns = array(
         'id' => 'int(8) NOT NULL',

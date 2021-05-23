@@ -7,8 +7,8 @@
  */
 
 class Song extends Root {
-    const TBNAME = 'caloz_song';
-    const TBLINKNAME = 'caloz_disc_songs';
+    const TBNAME = TABLEPREFIX.'_song';
+    const TBLINKNAME = TABLEPREFIX.'_disc_songs';
 
     static $columns = array(
         'id' => 'int(8) NOT NULL',

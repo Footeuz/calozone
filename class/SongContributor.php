@@ -7,7 +7,7 @@
  */
 
 class SongContributor extends Root {
-    const TBNAME = 'caloz_song_contributor';
+    const TBNAME = TABLEPREFIX.'_song_contributor';
 
     const R_AUTHOR = 1;
     const R_COMPOSER = 2;

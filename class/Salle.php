@@ -6,7 +6,7 @@
  */
 
 class Salle extends Root {
-    const TBNAME = 'caloz_salle';
+    const TBNAME = TABLEPREFIX.'_salle';
     
     static $columns = array(
         'id' => 'int(8) NOT NULL',
@@ -230,7 +230,7 @@ class Salle extends Root {
         $items = array();
         $query = 'SELECT count(*) as nbgigs, s.* FROM '.Gig::TBNAME.' as g 
                 LEFT JOIN '.static::TBNAME.' as s ON (g.salle_id = s.id) 
-                WHERE g.artist_id in ('.ARTISTID_MAIN.', '.ARTISTID_CHARTS.', '.ARTISTID_CIRCUS.') GROUP BY (g.salle_id) ORDER BY ';
+                WHERE g.artist_id in ('.ARTISTID_MAIN.', '.ARTISTID_SECOND.', '.ARTISTID_THIRD.') GROUP BY (g.salle_id) ORDER BY ';
         if ($order == 2) $query .= 'nbgigs DESC, ';
         $query .= 's.country ASC, s.dpt ASC, s.city ASC, s.name ASC';
         $result = SQL::query($query);

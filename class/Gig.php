@@ -7,7 +7,7 @@
  */
 
 class Gig extends Root {
-    const TBNAME = 'caloz_gig';
+    const TBNAME = TABLEPREFIX.'_gig';
     
     static $columns = array(
         'id' => 'int(8) NOT NULL',

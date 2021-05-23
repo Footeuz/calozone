@@ -7,7 +7,7 @@
  */
 
 class Contributor extends Root {
-    const TBNAME = 'caloz_contributor';
+    const TBNAME = TABLEPREFIX.'_contributor';
 
     static $columns = array(
         'id' => 'int(11) NOT NULL',

@@ -7,7 +7,7 @@
  */
 
 class TourSetlistSong extends Root {
-    const TBNAME = 'caloz_tour_setlist_songs';
+    const TBNAME = TABLEPREFIX.'_tour_setlist_songs';
 
     static $columns = array(
         'id' => 'int(8) NOT NULL',

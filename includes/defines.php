@@ -49,8 +49,19 @@ define('SMTP_PASSWORD','');//TODO
 define("SMTP_AUTH", true);
 define("SMTP_METHOD","smtp");//smtp
 
-
 define("FILIGRANE",'CALOZONE');
+
+define ('ARTISTID_MAIN', 1);
+define ('ARTISTID_SECOND', 4);
+define ('ARTISTID_THIRD', 3);
+
+define ('MEDIATYPEVIDEO', '1');
+define ('MEDIATYPEAUDIO', '2');
+
+define ('PODCAST_TITLE', 'Calogero le podcast');
+define ('PODCAST_MAIL', 'Calogero le podcast');
+
+define ('TABLEPREFIX', 'caloz');
 
 $countries = array(
     "FR"=>"France",
@@ -191,14 +202,4 @@ $list_types_media = array('1'=>'Video','2'=>'Audio');
 $list_main = array('0'=>'Non','1'=>'Oui');
 $list_roles = array(''=>'Aucun rôle','1'=>'Compositeur','2'=>'Arrangeur','3'=>'Realisateur','4'=>'Artiste','5'=>'Interprete');
 $list_supports = array('1'=>'Disque','2'=>'Single','3'=>'Vidéo','4'=>'Vinyle');
-
-define ('ARTISTID_MAIN', 1);
-define ('ARTISTID_CHARTS', 4);
-define ('ARTISTID_CIRCUS', 3);
-
-define ('MEDIATYPEVIDEO', '1');
-define ('MEDIATYPEAUDIO', '2');
-
-define ('PODCAST_TITLE', 'Calogero le podcast');
-define ('PODCAST_MAIL', 'Calogero le podcast');
 

@@ -6,7 +6,7 @@
  */
 
 class PicturePage extends Root {
-    const TBNAME = 'caloz_picture_page';
+    const TBNAME = TABLEPREFIX.'_picture_page';
 
     static $columns = array(
         'id' => 'int(8) NOT NULL',

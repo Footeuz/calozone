@@ -8,8 +8,8 @@
 
 class Lang {
 
-    const STORAGE = 'caloz_trad';
-    const STORAGE_LANG = 'caloz_lang';
+    const STORAGE = TABLEPREFIX.'_trad';
+    const STORAGE_LANG = TABLEPREFIX.'_lang';
 
     const LL_FR = 'fr';
     /*const LL_EN = 'en';
