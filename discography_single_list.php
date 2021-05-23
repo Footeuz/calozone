@@ -65,7 +65,7 @@ $cptismain=0;
     </div>
 
     <div class="text-center mt-3">
-        Découvrez et achetez <a href="https://www.facebook.com/Calogero-Discographie-Collectors-Le-livre-760809367343394/" target="_blank"><button>le livre dédié à la Discographie de <?= $mainartist ?></button></a> écrit par Pascal.
+        <?= $lang->l('txt_promo_book') ?>
     </div>
 </div>
 
