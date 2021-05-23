@@ -1,0 +1,12 @@
+<FilesMatch ".(MP3|mp3)$">
+  ForceType application/octet-stream
+  Header set Content-Disposition attachment
+</FilesMatch>
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^test/([a-zA-Z0-9]+)$ ./test.php?code=$1 [NC,L]
+RewriteRule ^testfinished/([0-9]+)$ ./testfinished.php?testid=$1 [NC,L]
+RewriteRule ^askcode/([0-9]+)$ ./askcode.php?testid=$1 [NC,L]

@@ -1,0 +1,111 @@
+.crossword {
+    background-color: #e9660a;
+    background-image: url('../../cases/Calogero-cigale.jpg');
+    background-position: 230px 180px;
+    background-repeat: no-repeat;
+    border-collapse: separate;
+    border-left: 1px solid #000;
+    border-spacing: 0;
+    border-top: 1px solid #000;
+    counter-reset: req;
+    empty-cells: hide;
+}
+.crossword caption h1 {
+    display: inline;
+    font-size: 2em;
+    margin: 0;
+    padding: 0;
+}
+.crossword caption h2 {
+    display: inline;
+    font-size: 1em;
+    font-style: italic;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+.crossword td {
+    background-color: #FFF;
+    border-bottom: 1px solid #e9660a;
+    border-right: 1px solid #e9660a;
+    height: 30px;
+    padding: 6px;
+    text-align: left;
+    vertical-align: top;
+    width: 20px;
+}
+.crossword td[id], .crossword td[data-hor], .crossword td[data-ver] {
+}
+.crossword td.sel {
+    background-color: #FF9;
+}
+.crossword td.err {
+    background-color: #F00;
+}
+.crossword td[id] {
+    counter-increment: req;
+}
+.crossword td[id]:before {
+    content: counter(req);
+    font-size: 10px;
+    margin: -5px;
+    position: absolute;
+}
+.crossword td input {
+    background-color: transparent;
+    border: 0 none;
+    font-size: 15px;
+    height: 100%;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+#definitions {
+    background-color: #CCC;
+    float: left;
+    width: 660px;
+}
+#definitions .pointer li {
+    cursor: pointer;
+}
+#definitions .pointer li:hover {
+    background-color: #069;
+}
+
+#tooltip {
+    background-color: #1b155a;
+    border: 2px solid #00F;
+    color: #f9f9f9;
+/*    cursor: move;*/
+    display:none;
+    padding: 5px;
+    position: absolute;
+    width: 200px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    font-weight:bold;
+}
+
+
+#create:after {
+    clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+#create fieldset {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+.crosswordimg {
+    position:absolute;
+    top:100px;
+    left:100px;
+}

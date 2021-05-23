@@ -1,0 +1,62 @@
+<FilesMatch ".(MP3|mp3)$">
+  ForceType application/octet-stream
+  Header set Content-Disposition attachment
+</FilesMatch>
+
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} ^calo\.zone [NC]
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://calo.zone/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^plan-du-site$ ./sitemap.php [NC,L]
+
+RewriteRule ^podcast-list$ ./podcast_list.php [NC,L]
+RewriteRule ^podcast-details-([0-9]+)$ ./podcast_details.php?id=$1 [NC,L]
+RewriteRule ^podcast-file-([0-9]+)$ ./action/podcast_get.php?id=$1 [NC,L]
+RewriteRule ^podcast-img-([0-9]+).jpg$ ./utils/get_img.php?type=podcast&id=$1 [NC,L]
+RewriteRule ^podcast-socialimg-([0-9]+).jpg$ ./utils/get_img.php?type=socialpodcast&id=$1 [NC,L]
+
+RewriteRule ^calendrier-avent-2019$ ./calendrier_avent.php [NC,L]
+RewriteRule ^cases/([0-9]+)/$ ./cases/$1.php [NC,L]
+
+RewriteRule ^clip-list$ ./clip_list.php [NC,L]
+RewriteRule ^clip-([0-9]+)$ ./clip_details.php?id=$1 [NC,L]
+RewriteRule ^clip-img-([0-9]+).jpg$ ./utils/get_img.php?type=clip&id=$1 [NC,L]
+
+RewriteRule ^vinyles$ ./discography_vinyle_list.php [NC,L]
+RewriteRule ^singles$ ./discography_single_list.php [NC,L]
+RewriteRule ^videographie$ ./discography_video_list.php [NC,L]
+RewriteRule ^discographie$ ./discography_cd_list.php [NC,L]
+RewriteRule ^disc-([a-zA-Z-]+)-([0-9]+)$ ./disc_details.php?id=$2 [NC,L]
+RewriteRule ^disc-img-([a-zA-Z-]+)-([0-9]+).jpg$ ./utils/get_img.php?type=disc&id=$2 [NC,L]
+RewriteRule ^disc-thumb-([a-zA-Z-]+)-([0-9]+).jpg$ ./utils/get_thumb.php?type=disc&id=$2 [NC,L]
+RewriteRule ^chansons-calogero$ ./song_list.php [NC,L]
+RewriteRule ^chanson-([a-zA-Z-]+)-([0-9]+)$ ./song_details.php?id=$2 [NC,L]
+RewriteRule ^auteur-compositeur-([a-zA-Z-]+)-([0-9]+)$ ./contributor.php?id=$2 [NC,L]
+RewriteRule ^liste-auteurs-compositeurs-calogero$ ./contributor_list.php [NC,L]
+
+RewriteRule ^tournees-calogero$ ./tour_list.php [NC,L]
+RewriteRule ^tournee-([a-zA-Z-]+)-([0-9]+)$ ./tour_details.php?id=$2 [NC,L]
+RewriteRule ^tourimg-img-([0-9]+).jpg$ ./utils/get_img.php?type=tour&id=$1 [NC,L]
+RewriteRule ^toursetlist-img-([0-9]+).jpg$ ./utils/get_img.php?type=toursetlist&id=$1 [NC,L]
+RewriteRule ^salles-concerts-calogero$ ./salle_list.php [NC,L]
+RewriteRule ^salle-concert-calogero-([a-zA-Z0-9]*)-([0-9]+)$ ./salle_details.php?id=$2 [NC,L]
+
+RewriteRule ^photos$ ./photos_list.php [NC,L]
+RewriteRule ^album-photo-([a-zA-Z-]+)-([0-9]+)$ ./photos_details.php?id=$2 [NC,L]
+
+RewriteRule ^recompenses$ ./recompenses.php [NC,L]
+RewriteRule ^historique-web$ ./historique_web.php [NC,L]
+
+RewriteRule ^media-list$ ./media_list.php [NC,L]
+RewriteRule ^media-([0-9]+)$ ./media_details.php?id=$1 [NC,L]
+
+RewriteRule ^photos-devantures$ https://calo.zone/album-photo-devantures-1 [R=301,L,QSA]
+RewriteRule ^photos-editos$ https://calo.zone/album-photo-editos-2 [R=301,L,QSA]
+RewriteRule ^photos-inclassables$ https://calo.zone/album-photo-inclassables-3 [R=301,L,QSA]
+RewriteRule ^photos-prix$ https://calo.zone/album-photo-prix-4 [R=301,L,QSA]
+RewriteRule ^photos-livredor$ https://calo.zone/album-photo-livredor-5 [R=301,L,QSA]
