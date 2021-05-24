@@ -63,6 +63,12 @@ define ('PODCAST_MAIL', 'Calogero le podcast');
 
 define ('TABLEPREFIX', 'caloz');
 
+define ('IDCLIP1', 'jasIqn8IifQ'); // en apesanteur
+define ('PLSTID', '6705491144');
+define ('IMGPAGESONGLIST', 'Calogero-Londres-20190119-FannyLinchet.jpg');
+define ('TOURPRODNAME', 'TS Prod');
+define ('TOURPRODLINK', 'http://www.tsprod.com');
+
 $countries = array(
     "FR"=>"France",
     "BE"=>"Belgique",

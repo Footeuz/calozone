@@ -32,8 +32,8 @@ if (!empty($listtours)) {
     </div>
 
     <div class="text-center mt-3">
-        <p>Les tournées de <?= $mainartist ?> sont produites par <a href="http://www.tsprod.com" title="TS Prod">TS Prod</a>.</p>
-        <p>Merci à toutes les personnes qui m'ont aidées à retrouver les dates et un grand merci à Gaëlle, Maëlyss, Sophie pour leur aide</p>
+        <p>Les tournées de <?= $mainartist ?> sont produites par <a href="<?= TOURPRODLINK ?>" title="<?= TOURPRODNAME ?>"><?= TOURPRODNAME ?></a>.</p>
+        <p><?= $lang->l('txt_thx_tour') ?></p>
     </div>
 </div>
 

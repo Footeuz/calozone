@@ -10,9 +10,9 @@ $og_image = 'public/images/chansons-'.$mainartistslug.'.jpg';
 include("header.php");
 
 $class = 'Song';
-$songs = Song::getStackCalo('name ASC');
-$songscharts = Song::getStackCharts('name ASC');
-$songscircus = Song::getStackCircus('name ASC');
+$songs = Song::getStackArtist('name ASC', ARTISTID_MAIN);
+$songssecond = Song::getStackArtist('name ASC', ARTISTID_SECOND);
+$songsthird = Song::getStackArtist('name ASC', ARTISTID_THIRD);
 $covers = Song::getStackCover('name ASC');
 $collaborations = Song::getStackCollaboration('name ASC');
 ?>
@@ -33,20 +33,20 @@ $collaborations = Song::getStackCollaboration('name ASC');
                     </div>
                     <div class="col-12 col-lg-4 ps-3">
                         <div class="mt-3">
-                            <img src="<?= URL ?>public/images/Calogero-Londres-20190119-FannyLinchet.jpg" alt="Calogero Londres 19 janvier 2019" class="w-100" />
-                            <p class="text-center">Cr&eacute;dit photo : Fanny L.</p>
+                            <img src="<?= URL ?>public/images/<?= IMGPAGESONGLIST ?>" alt="<?= $lang->l('alt_picture_songs'); ?>" class="w-100" />
+                            <p class="text-center"><?= $lang->l('Crédit photo : Fanny L.'); ?></p>
                         </div>
-                        <h2>Chansons des Charts</h2>
+                        <h2>Chansons de <?= Artist::getName(ARTISTID_SECOND) ?></h2>
                         <ul class="songs mt-3">
-                            <?php foreach ($songscharts as $song_id => $song) { ?>
+                            <?php foreach ($songssecond as $song_id => $song) { ?>
                                 <?php if (!$song['is_cover']) { ?>
                                     <li><a href="chanson-<?= $song['slug'] ?>-<?= $song['id'] ?>" title="Chanson <?= $song['name'] ?>"><?= $song['name'] ?></a></li>
                                 <?php } ?>
                             <?php } ?>
                         </ul>
-                        <h2>Chansons de Circus</h2>
+                        <h2>Chansons de <?= Artist::getName(ARTISTID_THIRD) ?></h2>
                         <ul class="songs mt-3">
-                            <?php foreach ($songscircus as $song_id => $song) { ?>
+                            <?php foreach ($songsthird as $song_id => $song) { ?>
                                 <?php if (!$song['is_cover']) { ?>
                                     <li><a href="chanson-<?= $song['slug'] ?>-<?= $song['id'] ?>" title="Chanson <?= $song['name'] ?>"><?= $song['name'] ?></a></li>
                                 <?php } ?>

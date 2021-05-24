@@ -65,7 +65,7 @@ $cptismain=0;
                     <div class="mt-3">
                         <p class="text-center fw-bold">La playlist des chansons collaborations ou reprises :</p>
                         <div class="mx-auto" style="width:650px;">
-                            <iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=650&height=350&color=ff0000&layout=dark&size=medium&type=playlist&id=6705491144&app_id=107951" width="650" height="350"></iframe>
+                            <iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=classic&autoplay=false&playlist=true&width=650&height=350&color=ff0000&layout=dark&size=medium&type=playlist&id=<?= PLSTID ?>&app_id=107951" width="650" height="350"></iframe>
                         </div>
                     </div>
                 </section>

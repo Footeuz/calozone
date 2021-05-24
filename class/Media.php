@@ -153,16 +153,18 @@ class Media extends Root {
      */
     public static function getDiscStack($disc_id=0, $type=''){
         $items = array();
-        $where = [];
+        $where = ['artist'=>ARTISTID_MAIN];
         if ($disc_id > 0) $where['albumid'] = $disc_id;
         if ($type != '') $where['type'] = $type;
         $artists = Artist::getStack();
 
         $result = SQL::select(static::TBNAME, $where, [], 'datediff ASC');
-        while ($item = $result->fetch_assoc()) {
-            $item['artistname'] = $artists[$item['artist']]['name'];
-            $item['artistpath'] = $artists[$item['artist']]['path'];
-            $items[$item['id']] = $item;
+        if ($result->num_rows>0) {
+            while ($item = $result->fetch_assoc()) {
+                $item['artistname'] = $artists[$item['artist']]['name'];
+                $item['artistpath'] = $artists[$item['artist']]['path'];
+                $items[$item['id']] = $item;
+            }
         }
         return $items;
     }

@@ -98,7 +98,7 @@ class Song extends Root {
     /**
      * Get full stack
      * $status string Type of account
-     * @param $order string
+     * @param string $order
      * @return \Song[]
      */
     public static function getStack($order='')
@@ -114,51 +114,16 @@ class Song extends Root {
     }
 
     /**
-     * Get stack for Charts
+     * Get stack for specific artist
      * $status string Type of account
-     * @param $order string
+     * @param string $order
+     * @param integer $artid
      * @return \Song[]
      */
-    public static function getStackCalo($order='')
+    public static function getStackArtist($order='', $artid=ARTISTID_MAIN)
     {
         $items = array();
-        $where = array('artist_id'=> array('1'));
-        $strorder = ($order != '') ? $order : '';
-        $result = SQL::select(static::TBNAME, $where, [], $strorder);
-        while ($item = $result->fetch_assoc()) {
-            $items[] = $item;
-        }
-        return $items;
-    }
-
-    /**
-     * Get stack for Charts
-     * $status string Type of account
-     * @param $order string
-     * @return \Song[]
-     */
-    public static function getStackCharts($order='')
-    {
-        $items = array();
-        $where = array('artist_id'=> array('4'));
-        $strorder = ($order != '') ? $order : '';
-        $result = SQL::select(static::TBNAME, $where, [], $strorder);
-        while ($item = $result->fetch_assoc()) {
-            $items[] = $item;
-        }
-        return $items;
-    }
-
-    /**
-     * Get stack for Circus
-     * $status string Type of account
-     * @param $order string
-     * @return \Song[]
-     */
-    public static function getStackCircus($order='')
-    {
-        $items = array();
-        $where = array('artist_id'=> array('3'));
+        $where = array('artist_id'=> $artid);
         $strorder = ($order != '') ? $order : '';
         $result = SQL::select(static::TBNAME, $where, [], $strorder);
         while ($item = $result->fetch_assoc()) {
@@ -170,7 +135,7 @@ class Song extends Root {
     /**
      * Get stack for covers by Calo
      * $status string Type of account
-     * @param $order string
+     * @param string $order
      * @return \Song[]
      */
     public static function getStackCover($order='')
@@ -188,13 +153,13 @@ class Song extends Root {
     /**
      * Get stack for covers by Calo
      * $status string Type of account
-     * @param $order string
+     * @param string $order
      * @return \Song[]
      */
     public static function getStackCollaboration($order='')
     {
         $items = array();
-        $where = array('is_cover'=> 0, 'artist_id' => 'not in (1,3,4)');
+        $where = array('is_cover'=> 0, 'artist_id' => 'not in ('.ARTISTID_MAIN.', '.ARTISTID_SECOND.', '.ARTISTID_THIRD.')');
         $strorder = ($order != '') ? $order : '';
         $result = SQL::select(static::TBNAME, $where, [], $strorder);
         while ($item = $result->fetch_assoc()) {

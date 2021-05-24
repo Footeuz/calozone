@@ -96,19 +96,11 @@ if (!empty($clips)) {
     </div>
 </div>
 <?php
-/*    if (!empty($clips)) {
-        foreach ($clips as $clip_id => $item) {
-            if (!empty($item['embed'])) {
-                echo '<div id="embed-'.$clip_id.'" class="d-none">'.$item['embed'].'</div>';
-            }
-        }
-    }
-*/
 $clip_id = Request::requestId('clip_id');
 if ($clip_id>0) {
     $firstclip = str_replace("https://www.youtube.com/watch?v=", "", $clips[$clip_id]['path']);
 } else {
-    $firstclip = 'jasIqn8IifQ'; // En apesanteur
+    $firstclip = IDCLIP1;
 }
 echo '<input type="hidden" id="firstclip" name="firstclip" value="'.$firstclip.'">';
 ?>
