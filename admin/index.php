@@ -32,6 +32,7 @@ $menus['salle'] = $lang->l('salle');
 $menus['tour'] = $lang->l('tour');
 $menus['gig'] = $lang->l('gig');
 $menus['picturepage'] = $lang->l('picturepage');
+$menus['menu'] = $lang->l('menu');
 $menus['trad'] = $lang->l('trad');
 
 if($user->status === UserAdmin::S_ADMIN || $user->status === UserAdmin::S_SUPERADMIN) {
