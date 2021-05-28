@@ -48,33 +48,22 @@
                                 </button>
                                 <div class="navbar-collapse collapse align-content-end" id="navbarSupportedContent" style="">
                                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-0 mt-2">
-                                        <li class="nav-item"><a class="nav-link fw-bold" href="<?= URL . 'podcast-list' ?>"><?= PODCAST_TITLE ?></a></li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                Concerts
-                                            </a>
-                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <li><a class="dropdown-item" href="<?= URL . 'tournees-'.$mainartistslug ?>">Tournées</a></li>
-                                                <li><a class="dropdown-item" href="<?= URL . 'salles-concerts-'.$mainartistslug ?>">Salles de concerts</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                Discographie
-                                            </a>
-                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                                <li><a class="dropdown-item" href="<?= URL . 'discographie' ?>">Discographie CD</a></li>
-                                                <li><a class="dropdown-item" href="<?= URL . 'vinyles' ?>">Discographie Vinyles</a></li>
-                                                <li><a class="dropdown-item" href="<?= URL . 'singles' ?>">Discographie Singles</a></li>
-                                                <li><a class="dropdown-item" href="<?= URL . 'videographie' ?>">Vidéographie</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item"><a class="nav-link" href="<?= URL . 'chansons-'.$mainartistslug ?>">Chansons</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="<?= URL . 'clip-list' ?>">Clips</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="<?= URL . 'media-list' ?>">Archives médias</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="<?= URL . 'recompenses' ?>">Récompenses</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="<?= URL . 'photos' ?>">Photos</a></li>
-                                        <!--<li class="nav-item"><a class="nav-link" href="<?= URL . 'calendrier-avent-2019' ?>">Calendrier de l'avent Calogero</a></li>-->
+                                        <?php if (isset($menu_header) && !empty($menu_header)) { ?>
+                                            <?php foreach ($menu_header as $item) { ?>
+                                                <li class="nav-item <?= ((!empty($item['childs']))?'dropdown':''); ?>">
+                                                    <a class="nav-link <?= ((!empty($item['childs']))?'dropdown-toggle':''); ?>" href="<?= ((empty($item['childs']))? $item['link_url']:'#') ?>" <?= ((!empty($item['childs']))? 'id="navbarDropdown'.$item['id'].'" role="button" data-bs-toggle="dropdown" aria-expanded="false"':'') ?>>
+                                                        <?= $item['name'] ?>
+                                                    </a>
+                                                    <?php if (!empty($item['childs'])) { ?>
+                                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown<?= $item['id'] ?>">
+                                                            <?php foreach ($item['childs'] as $child) { ?>
+                                                                <li><a class="dropdown-item" href="<?= $child['link_url'] ?>"><?= $child['name'] ?></a></li>
+                                                            <?php } ?>
+                                                        </ul>
+                                                    <?php } ?>
+                                                </li>
+                                            <?php } ?>
+                                        <?php } ?>
                                     </ul>
                                 </div>
                             </div>

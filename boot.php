@@ -35,3 +35,5 @@ $js = [];
 
 $mainartist = Artist::getName(ARTISTID_MAIN);
 $mainartistslug = strtolower($mainartist);
+
+$menu_header = MenuItem::getStackMenu(1);

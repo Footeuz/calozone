@@ -26,11 +26,12 @@ if (!empty($menuitems)) {
             $list_menuitems[$menuitem_id] = $menuitem['name'];
     }
 }
+sat($item->menu_id);
 ?>
 <form id="menuitem_edit_form" method="post" action="pages/menuitem/menuitemSave.php">
     
     <input type="hidden" name="id" value="<?= $item->id ?>" />
-    <input type="hidden" name="menu_id", id="menu_id" value="<?= $item->menu_id ?>" />
+    <input type="hidden" name="menu_id" id="menu_id" value="<?= $item->menu_id ?>" />
 
     <h2><?= ($item->id?$item->name:$lang->l('new_menu_item')) ?></h2>
     <fieldset>

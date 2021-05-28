@@ -55,8 +55,6 @@ if(isset($item->id) && $item->id >0) {
                     echo '<td class="w20">'.$itemq['name'].'</td>';
                     echo '<td class="w15">'.MenuItem::getName($itemq['parent_id']).'</td>';
                     echo '<td class="w15">'.$itemq['link_url'].'</td>';
-                    echo '<td class="w15">'.(($itemq['page_id']>0) ? $itemq['page_id'].' - '.Page::getName($itemq['page_id']) : '').'</td>';
-                    echo '<td class="w15">'.ProductCategory::getName($itemq['categoryproduct_id']).'</td>';
                     echo '<td>';
                         echo '<a class="icon_btn create_btn" href="javascript:edit(\''.strtolower($classq).'\', ' . $itemq['id'] . ', null, '.$item->id.');"></a>';
                         echo '<a class="icon_btn delete_btn" href="javascript:askDel(\''.strtolower($classq).'\', ' . $itemq['id'] . ', \'' . str_replace("'", "\'", Menu::getName($itemq['menu_id'])) . '\');"></a>';
@@ -70,8 +68,6 @@ if(isset($item->id) && $item->id >0) {
                             echo '<td class="w20">'.$itemchild['name'].'</td>';
                             echo '<td class="w15">'.MenuItem::getName($itemchild['parent_id']).'</td>';
                             echo '<td class="w15">'.$itemchild['link_url'].'</td>';
-                            echo '<td class="w15">'.Page::getName($itemchild['page_id']).'</td>';
-                            echo '<td class="w15">'.ProductCategory::getName($itemchild['categoryproduct_id']).'</td>';
                             echo '<td>';
                             echo '<a class="icon_btn create_btn" href="javascript:edit(\''.strtolower($classq).'\', ' . $itemchild['id'] . ', null, '.$item->id.');"></a>';
                             echo '<a class="icon_btn delete_btn" href="javascript:askDel(\''.strtolower($classq).'\', ' . $itemchild['id'] . ', \'' . str_replace("'", "\'", Menu::getName($itemchild['menu_id'])) . '\');"></a>';

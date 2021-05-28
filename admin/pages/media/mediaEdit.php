@@ -33,7 +33,7 @@ $list_categories=array('Collaboration'=>'Collaboration','Autre'=>'Autre');
         <div class="f2"><label><?php echo $lang->l('path_media'); ?> </label><input type="text" name="path" class="w50" value="<?= htmlentities($item->path) ?>" /></div>
         <div class="f2"><label><?php echo $lang->l('media_type'); ?> </label><?= Render::select('type', $list_types, $item->type) ?></div>
         <div class="f2"><label><?php echo $lang->l('category_media'); ?> </label><?= Render::select('category', $list_categories, $item->category) ?></div>
-        <div class="f2"><label><?php echo $lang->l('datediff'); ?> </label><input type="text" name="datediff" value="<?php if (!empty($item->datediff)) echo $item->datediff; else echo date('d-m-Y'); ?>" id="datepickerdatediff" /></div>
+        <div class="f2"><label><?php echo $lang->l('datediff'); ?> </label><input type="text" name="datediff" value="<?php if (!empty($item->datediff)) echo substr($item->datediff,8,2).'-'.substr($item->datediff,5,2).'-'.substr($item->datediff,0,4); else echo date('d-m-Y'); ?>" id="datepickerdatediff" /></div>
         <div class="f2"><label><?php echo $lang->l('heurediff'); ?> </label><input type="text" name="heurediff" class="w50" value="<?= htmlentities($item->heurediff) ?>" /></div>
         <div class="f2"><label><?php echo $lang->l('date_ajout'); ?> </label><input type="text" name="stampadd" value="<?php if (!empty($item->stampadd)) echo $item->stampadd; else echo date('Y-m-d h:i:s'); ?>" id="datepickerstampadd" /></div>
         <div class="f2 clr"><label><?php echo $lang->l('artist_media'); ?> </label><?= Render::select('artist', $list_artists, $item->artist) ?></div>
