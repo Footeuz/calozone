@@ -18,7 +18,7 @@ body {
   font: normal 16px/1.5 "Helvetica Neue", sans-serif; }
 
 .section {
-  background: #9099a0;
+  background: #dd7426;
   padding: 5px 0; }
 
 .section .container {
@@ -39,11 +39,11 @@ h2 {
   margin: 0 20px 10px 20px;
   color: #fff;
   font-weight: bold;
-  border-bottom: 2px solid #9099a0; }
+  border-bottom: 2px solid #dd7426; }
 
 h3 {
   font-size: 1.1rem;
-  color: #9099a0;
+  color: #dd7426;
   text-transform: initial; }
 
 .timeline {

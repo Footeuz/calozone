@@ -10,7 +10,7 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-  background-color: #000000 !important;
+  background-color: #0a1b38 !important;
   color: #fff !important;
   font-family: "Raleway", sans-serif !important;
   font-size: 14px !important; }
@@ -54,7 +54,7 @@ a, a:visited {
 a {
   color: #fbff92 !important; }
   a:hover {
-    color: #9099a0 !important; }
+    color: #dd7426 !important; }
 
 .wrapper {
   position: relative;
@@ -75,7 +75,7 @@ a {
     position: absolute;
     width: 80px;
     height: 80px;
-    border-color: #9099a0;
+    border-color: #dd7426;
     /* or whatever colour */
     border-style: solid;
     /* or whatever style */
@@ -113,7 +113,7 @@ a {
     line-height: 20px; }
 
 footer {
-  background: linear-gradient(#1c1e21, #312648);
+  background: linear-gradient(#303e57, #44597c);
   color: #fff;
   width: 100%;
   padding: 0;
@@ -122,9 +122,9 @@ footer {
   position: fixed;
   z-index: 100; }
   footer a {
-    color: #bac7d0 !important; }
+    color: #ed7c29 !important; }
     footer a:hover {
-      color: #9099a0 !important; }
+      color: #dd7426 !important; }
 
 table tr td {
   margin: 0; }
@@ -152,9 +152,9 @@ h4 img {
   text-align: center; }
 
 header {
-  background: linear-gradient(#312648, #1c1e21); }
+  background: linear-gradient(#44597c, #303e57); }
   header .dropdown-menu {
-    background-color: #000000; }
+    background-color: #0a1b38; }
 
 .logosite {
   height: 69px; }
@@ -165,11 +165,11 @@ header {
 .slogan {
   font-weight: bold;
   font-size: 0.8em;
-  color: #9099a0; }
+  color: #dd7426; }
 
 .headerico {
   font-size: 3rem;
-  color: #9099a0; }
+  color: #dd7426; }
 
 header nav {
   max-width: 860px; }
@@ -187,7 +187,7 @@ header nav {
     cursor: pointer; }
 
 button {
-  background: #9099a0;
+  background: #dd7426;
   padding: 5px 15px;
   margin: 0 0 10px 0;
   font-weight: bold;
@@ -196,12 +196,12 @@ button {
   border-radius: 10px;
   color: #fff; }
   button:hover {
-    background: #9099a0;
+    background: #dd7426;
     color: #fff; }
 
 .btnpodcast {
   color: #fff;
-  background-color: #9099a0;
+  background-color: #dd7426;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
@@ -249,7 +249,7 @@ button {
 
 #tour-list h3, #tour-devantures h3, #disc-details h3 {
   color: #ddd;
-  background: linear-gradient(#1c1e21, #312648);
+  background: linear-gradient(#303e57, #44597c);
   border-radius: 10px;
   padding: 10px;
   font-weight: bold;
