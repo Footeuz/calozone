@@ -10,7 +10,7 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-  background-color: #0a1b38 !important;
+  background-color: #000000 !important;
   color: #fff !important;
   font-family: "Raleway", sans-serif !important;
   font-size: 14px !important; }
@@ -22,7 +22,8 @@ body {
 
 h1 {
   color: #fff;
-  font-family: "Questrial", sans-serif; }
+  font-family: "Questrial", sans-serif;
+  margin-bottom: 0; }
 
 h2, h3, h4, h5, h6 {
   font-size: 18px;
@@ -53,7 +54,7 @@ a, a:visited {
 a {
   color: #fbff92 !important; }
   a:hover {
-    color: #dd7426 !important; }
+    color: #9099a0 !important; }
 
 .wrapper {
   position: relative;
@@ -74,7 +75,7 @@ a {
     position: absolute;
     width: 80px;
     height: 80px;
-    border-color: #dd7426;
+    border-color: #9099a0;
     /* or whatever colour */
     border-style: solid;
     /* or whatever style */
@@ -112,7 +113,7 @@ a {
     line-height: 20px; }
 
 footer {
-  background: linear-gradient(#303e57, #44597c);
+  background: linear-gradient(#1c1e21, #312648);
   color: #fff;
   width: 100%;
   padding: 0;
@@ -121,9 +122,9 @@ footer {
   position: fixed;
   z-index: 100; }
   footer a {
-    color: #ed7c29 !important; }
+    color: #bac7d0 !important; }
     footer a:hover {
-      color: #dd7426 !important; }
+      color: #9099a0 !important; }
 
 table tr td {
   margin: 0; }
@@ -151,9 +152,9 @@ h4 img {
   text-align: center; }
 
 header {
-  background: linear-gradient(#303e57, #44597c); }
+  background: linear-gradient(#312648, #1c1e21); }
   header .dropdown-menu {
-    background-color: #0a1b38; }
+    background-color: #000000; }
 
 .logosite {
   height: 69px; }
@@ -164,11 +165,11 @@ header {
 .slogan {
   font-weight: bold;
   font-size: 0.8em;
-  color: #dd7426; }
+  color: #9099a0; }
 
 .headerico {
   font-size: 3rem;
-  color: #dd7426; }
+  color: #9099a0; }
 
 header nav {
   max-width: 860px; }
@@ -186,7 +187,7 @@ header nav {
     cursor: pointer; }
 
 button {
-  background: #dd7426;
+  background: #9099a0;
   padding: 5px 15px;
   margin: 0 0 10px 0;
   font-weight: bold;
@@ -195,12 +196,12 @@ button {
   border-radius: 10px;
   color: #fff; }
   button:hover {
-    background: #dd7426;
+    background: #9099a0;
     color: #fff; }
 
 .btnpodcast {
   color: #fff;
-  background-color: #dd7426;
+  background-color: #9099a0;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
@@ -248,7 +249,7 @@ button {
 
 #tour-list h3, #tour-devantures h3, #disc-details h3 {
   color: #ddd;
-  background: linear-gradient(#303e57, #44597c);
+  background: linear-gradient(#1c1e21, #312648);
   border-radius: 10px;
   padding: 10px;
   font-weight: bold;

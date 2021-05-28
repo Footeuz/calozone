@@ -23,14 +23,10 @@ body {
 }
 
 
-/* .section SECTION
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 .section {
     background: $orange;
     padding: 5px 0;
 }
-
 .section .container {
     width: 90%;
     max-width: 1200px;
@@ -48,9 +44,9 @@ body {
 
 h2 {
     font-size:1.2rem;
-    padding:20px 0 0px;
-    margin: 0px 20px 10px 20px;
-    color:$white
+    padding:20px 0 0;
+    margin: 0 20px 10px 20px;
+    color:$white;
     font-weight:bold;
     border-bottom:2px solid $orange;
 }
@@ -61,21 +57,18 @@ h3 {
     text-transform: initial;
 }
 
-
-/* TIMELINE
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 .timeline {
     white-space: nowrap;
     overflow-x: hidden;
+
+    ol {
+        font-size: 0;
+        width: 100vw;
+        padding: 320px 0;
+        transition: all 1s;
+    }
 }
 
-.timeline ol {
-    font-size: 0;
-    width: 100vw;
-    padding: 320px 0;
-    transition: all 1s;
-}
 
 .timeline ol li {
     position: relative;

@@ -13,4 +13,7 @@ $orangelight : #ed7c29;
 $yellow : #fbff92;
 $color3 : #70d1ff;
 
+$first : #303e57;
+$second : #44597c;
+
 $mobile-query: "screen and (max-width: 580px)";
