@@ -3,7 +3,7 @@
 
         <footer class="row w-100 m-0 p-0">
             <div class="col-12 col-lg-6 text-start wrapper">
-                Rejoignez la <span class="d-none d-lg-inline-block">communauté</span> &nbsp;<a href="https://www.facebook.com/groups/fzcalo/" title="Fanzone Calogero Facebook" target="_blank">FanZone</a> (non officiel) - <a href="<?= URL ?>plan-du-site"><?= $lang->l('sitemap_title') ?></a>
+                <?= $lang->l('join-fr'); ?> <a href="https://www.facebook.com/groups/fzcalo/" title="Fanzone Calogero Facebook" target="_blank">FanZone</a> (non officiel) - <a href="<?= URL ?>plan-du-site"><?= $lang->l('sitemap_title') ?></a>
             </div>
             <div class="col-12 col-lg-6 text-end wrapper">
                 &copy; <a href="mailto:contact@stephaniemichel.com">S. Michel</a> 2019-<?= date('Y'); ?> * Un site <a href="https://stephaniemichel.com">WeBerry.fr</a>
