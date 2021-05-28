@@ -1,4 +1,5 @@
 .idea/*
+_doc/unversioned/*
 includes/defines.php
 public/css/.sass*
 public/images/Blankass*
