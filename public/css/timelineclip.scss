@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Fira+Sans:200,400,500);
+@import "vars";
 
 div.container {
     display: flex;
@@ -44,8 +45,8 @@ div.item {
     position: -webkit-sticky;
     position: sticky;
     top: 1rem;
-    background-color: #dd7426;
-    color:#fff;
+    background-color: $orange;
+    color:$white
     padding: 4px 4px;
     width: 53px;
     border-radius: 10px;
@@ -87,7 +88,7 @@ div.item {
       margin-right:10px;
     }
     .timelineclipname {
-      color: #fff;
+      color: $white
       font-weight:normal;
     }
     ul {

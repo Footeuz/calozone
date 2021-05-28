@@ -1,30 +1,4 @@
-$raleway : 'Raleway', sans-serif;
-$questrial : 'Questrial', sans-serif;
-$beige : #c9c6a5;
-$red : #98080c;
-$redhover : #b91319;
-$greyhover : #9E9E9E;
-$greyborder : rgba(128, 128, 128, 1);
-$greybg : rgba(214, 214, 214, 0.32);
-$greyfont : #ddd;
-$white : #fff;
-$whitetrans : rgba(255,255,255, 0.7);
-$bgmain : #0a1b38;
-$green : #8dc63f;
-$orange : #dd7426;
-$orangelight : #ed7c29;
-$yellow : #fbff92;
-$fontsizebtn : 30px;
-
-$color1 : #0A161C;
-$color2 : #173342;
-$color3 : #70d1ff;
-$color4 : #5F5F5F;
-$color5 : #797979;
-
-$mobile-query: "screen and (max-width: 580px)";
-
-/********************************************************/
+@import "vars";
 
 * {
   margin: 0;
@@ -268,7 +242,7 @@ button {
 }
 
 #tour-list h3, #tour-devantures h3, #disc-details h3 {
-  color: $beige;
+  color: $greyfont;
   background: linear-gradient(#303e57, #44597c);
   border-radius: 10px;padding:10px;
   font-weight:bold;

@@ -1,0 +1,16 @@
+$raleway : 'Raleway', sans-serif;
+$questrial : 'Questrial', sans-serif;
+$red : #98080c;
+$greyhover : #9E9E9E;
+$greyborder : rgba(128, 128, 128, 1);
+$greybg : rgba(214, 214, 214, 0.32);
+$greyfont : #ddd;
+$white : #fff;
+$whitetrans : rgba(255,255,255, 0.7);
+$bgmain : #0a1b38;
+$orange : #dd7426;
+$orangelight : #ed7c29;
+$yellow : #fbff92;
+$color3 : #70d1ff;
+
+$mobile-query: "screen and (max-width: 580px)";

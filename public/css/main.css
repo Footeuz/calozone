@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/********************************************************/
 * {
   margin: 0;
   padding: 0;
@@ -248,7 +247,7 @@ button {
   width: 100%; }
 
 #tour-list h3, #tour-devantures h3, #disc-details h3 {
-  color: #c9c6a5;
+  color: #ddd;
   background: linear-gradient(#303e57, #44597c);
   border-radius: 10px;
   padding: 10px;
